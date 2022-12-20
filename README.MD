@@ -43,7 +43,7 @@ df9000000 = pd.Q_convert_to_fast_string(
 )
 
 
-r"""
+
 %timeit df900.loc[df900.Name.s_string_contains('y') | df900.Name.s_string_is('Montvila, Rev. Juozas')]
 %timeit df900.loc[df900.Name.str.contains('y',regex=False) | (df900.Name == 'Montvila, Rev. Juozas')]
 604 µs ± 9.09 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
